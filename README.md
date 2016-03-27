@@ -47,8 +47,8 @@ On Windows, do this as an administrator. I also recommend [ConEmu](https://conem
 - start watching files in jekyll and asset directories for changes
 - start BrowserSync
 - compile the jekyll site
-- compile Sass into css and generate a sourcemap
-- concatenate JavaScript files into scripts.js and generate a sourcemap
+- compile Sass into css and generate a source map, and lint
+- concatenate JavaScript files into scripts.js and generate a source map, and lint
 - copy the jekyll site and all assets into the `build/development` and `build/assets` directories (we take the assets out of the jekyll directory in development because jekyll deletes and rebuilds its containing directory on every site rebuild - a frequent occurrence in the development phase)
 
 Now that it's watching your jekyll and asset directories, any changes will automatically reload your browser window, which is ideal for efficient development.
