@@ -1,7 +1,7 @@
 {
-  "name": "wilcofolio-jekyll",
+  "name": "gulp-jekyll-starter",
   "version": "0.0.1",
-  "description": "Portfolio built using Jekyll and Gulp",
+  "description": "A starter project integrating gulp automation with the jekyll static site generator",
   "private": true,
   "devDependencies": {
     "browser-sync": "^2.11.2",

@@ -1,3 +1,21 @@
+# gulp-jekyll-starter
+
+A starter project which integrates gulp automation with the jekyll static site generator.
+
+## Features
+- Generates Jekyll site
+- Reloads the browser on any changes
+- Generates CSS from Sass files, with sourcemaps and linting
+- Concatenates JavaScript files, with sourcemaps and linting
+- Includes a simple image tag plugin for ease of use
+- Optimises and revisions CSS, JS and image files for production
+- Optional deployment with rsync
+
+### Credits
+
+- Thanks to [Stefan Imhoff](http://stefanimhoff.de/) for his great [Introduction to Gulp.js tutorial series](http://stefanimhoff.de/2014/gulp-tutorial-1-intro-setup/), much of which I've used here.
+- [Octopress Image Tag plugin](https://github.com/octopress/image-tag) by the fine people at Octopress
+
 # Installation
 
 ## 1. Install these:
