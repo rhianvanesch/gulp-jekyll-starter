@@ -57,8 +57,8 @@ Now that it's watching your jekyll and asset directories, any changes will autom
 
 `gulp publish` will get the site ready for deployment:
 - compile jekyll site
-- compile Sass into css, generate a sourcemap, minify and lint
-- concatenate JavaScript files, generate a sourcemap, minify and lint
+- compile Sass into css and minify
+- concatenate JavaScript files and minify
 - optimise all images
 - revision assets
 - use an additional jekyll `_config.build.yml` file to overwrite any development settings from `_config.yml`, e.g. the `site.url` variable
