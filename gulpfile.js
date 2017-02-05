@@ -2,6 +2,9 @@ const gulp = require('gulp');
 const browsersync = require('browser-sync');
 const child = require('child_process');
 
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+
 const jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 
 // The default task will run the jekyll build task and serve the site
@@ -29,4 +32,16 @@ gulp.task('jekyll', (done) => {
     '--drafts'
   ])
   .on('close', done);
+})
+
+gulp.task('sass', () => {
+  return gulp.src('./_sass/main.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./assets'))
+})
+
+gulp.task('sass:watch', () => {
+  gulp.watch('./_sass/**/*.scss', ['sass'])
 })
