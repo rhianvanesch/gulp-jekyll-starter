@@ -34,14 +34,21 @@ gulp.task('jekyll', (done) => {
   .on('close', done);
 })
 
+// Sass task: compile .scss files
 gulp.task('sass', () => {
-  return gulp.src('./_sass/main.scss')
+  // Location of source file. '.' is the project root
+  return gulp.src('./_sass/main.scss') 
+    // Initialise sourcemap generation:
     .pipe(sourcemaps.init())
+    // compile Sass files
     .pipe(sass().on('error', sass.logError))
+    // write sourcemaps into the /maps directory, inside gulp.dest
     .pipe(sourcemaps.write('./maps'))
+    // Location of destination file(s). '.' is the project root
     .pipe(gulp.dest('./assets'))
 })
 
+// Watch our .scss files for changes; if they change run the 'sass' task
 gulp.task('sass:watch', () => {
   gulp.watch('./_sass/**/*.scss', ['sass'])
 })
