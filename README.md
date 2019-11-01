@@ -1,3 +1,5 @@
+⚠⚠⚠ This project is now archived. The dependencies are very out-of-date - proceed with caution! ⚠⚠⚠
+
 # gulp-jekyll-starter
 
 A starter project which integrates gulp automation with the jekyll static site generator.
